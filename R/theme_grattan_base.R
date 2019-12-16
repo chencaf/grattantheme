@@ -114,8 +114,10 @@ theme_grattan_base <- function(base_size = 18,
       strip.background = element_rect(),
       strip.text = element_text(
         size = rel(1),
-        margin = margin(0.8 * half_line,
-                        0.8 * half_line, 0.8 * half_line, 0.8 * half_line)
+        margin = margin(t = 0.2 * half_line,
+                        r = 0.4 * half_line,
+                        b = 0.4 * half_line,
+                        l = 0.4 * half_line)
       ),
       strip.text.x = NULL,
       strip.text.y = element_text(angle = -90),
