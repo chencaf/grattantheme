@@ -48,7 +48,7 @@ save_chartdata <- function(filename, object = ggplot2::last_plot(),
                 " is not a valid filename; filename must end in .xlsx"))
   }
 
-  if (!"ggplot" %in% class(object)) {
+  if (!inherits(object, "ggplot")) {
     stop("`object` is not a ggplot2 object")
   }
 

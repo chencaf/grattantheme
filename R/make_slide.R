@@ -49,7 +49,7 @@ make_slide <- function(graph = last_plot(),
 
   pandoc_test()
 
-  if (!"gg" %in% class(graph)) {
+  if (!inherits(graph, "gg")) {
     stop("The object is not a ggplot2 graph and",
          " cannot be plotted with make_slide()")
   }
@@ -253,7 +253,7 @@ make_presentation <- function(graphs,
          " either '16:9' (the default) or '4:3'")
   }
 
-  if ("gg" %in% class(graphs)) {
+  if (inherits(graphs, "gg")) {
     graphs <- list(graphs)
   }
 
